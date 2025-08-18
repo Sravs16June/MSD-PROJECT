@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop N Save</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="wave-overlay"></div>
+
+  <header>
+    <div class="logo">Shop N Save</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Recipes</a>
+      <a href="#">Deals</a>
+      <a href="#">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <a href="#" onclick="logout()">Logout</a>
+<script>
+  function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "login.html";
+  }
+</script>
+
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Fresh Groceries Delivered to Your Door</h1>
+      <p>AI-powered shopping, meal planning, and more — all in one place.</p>
+      <a href="#" class="cta">Shop Now</a>
+    </div>
+  </section>
+
+
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+      <div class="category-card">
+        <img src="https://assets.oyegifts.com/flowers-n-gifts/vendordata/product/5-kg-small-fresh-fruits-basket.jpg" alt="Fruits">
+        <h3>Fruits</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://img.freepik.com/premium-vector/fresh-vegetables-basket-vector_1023984-32080.jpg" alt="Vegetables">
+        <h3>Vegetables</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://wrapshap.com/cdn/shop/files/EidHamper2.jpg?v=1711617687&width=1445" alt="Snacks">
+        <h3>Snacks</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOLU9af6GSr8m1YpbB20SdSzs_F5Wo1Ci9iw&s" alt="Frozen Foods">
+        <h3>Frozen Foods</h3>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="features">
+    <div class="feature-card">
+      <h3>AI Meal Planner</h3>
+      <p>Get personalized grocery suggestions based on your lifestyle.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Pantry Scanner</h3>
+      <p>Scan your fridge and find recipes instantly.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Local & Fresh</h3>
+      <p>Farm-to-table freshness at your fingertips.</p>
+    </div>
+  </section>
+
+  <script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+
+
+  <footer>
+    <p>&copy; 2025 ShopNSave. All rights reserved.</p>
+  </footer>
+</body>
+</html>
